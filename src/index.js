@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 // init web route
 initWebRouter(app);
 
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("Bot running at " + port);
 })
