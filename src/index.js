@@ -17,9 +17,10 @@ app.use(bodyParser.urlencoded({extended : true}));
 // init web route
 initWebRouter(app);
 
-let port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log("Bot running at " + port);
-})
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
 
 console.log(process.env.VERIFY_TOKEN)
