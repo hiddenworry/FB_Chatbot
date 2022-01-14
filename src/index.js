@@ -1,7 +1,7 @@
-import express from "express";
-import viewEngine from "./config/viewEngines";
-import initWebRouter from  "./routes/web";
-import bodyParser from "body-parser";
+const express =  require("express");
+const viewEngine = require("./config/viewEngines");
+const initWebRouter = require("./routes/web");
+const bodyParser = require ("body-parser");
 require("dotenv").config();
 
 
@@ -20,7 +20,7 @@ initWebRouter(app);
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 app.listen(port, host, function() {
-    console.log("Server started.......");
+    console.log("Server started......." + port);
   });
 
 console.log(process.env.VERIFY_TOKEN)
