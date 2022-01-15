@@ -134,7 +134,7 @@ function callSendAPI(sender_psid, response) {
     // Construct the message body
     let request_body = {
         "recipient": {
-            "id": "100012508003975"
+            "id": sender_psid
         },
         "message": response
     }
